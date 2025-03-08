@@ -29,29 +29,8 @@ LeafyLens is a web-based portal designed to assist farmers in two crucial stages
 - **Machine Learning:** TensorFlow, Keras, OpenCV, Pandas, NumPy
 - **Dataset Processing:** Image preprocessing and augmentation techniques
 
-## Installation
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/sakshamverma21/LeafyLens.git
    ```
-2. Navigate to the project directory:
-   ```sh
-   cd LeafyLens
-   ```
-3. Install required dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-4. Run the application:
-   ```sh
-   python app.py
-   ```
-5. Open your browser and go to:
-   ```
-   http://localhost:5000
-   ```
-
+   
 ## Usage
 1. Select **Sowing Stage** or **Growth Stage**.
 2. For **Sowing Stage**, enter soil and weather details to get a crop recommendation.
