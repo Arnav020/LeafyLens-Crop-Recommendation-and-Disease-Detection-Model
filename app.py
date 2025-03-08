@@ -19,6 +19,7 @@ y = dataset.iloc[:, -1].values
 # OneHotEncode the labels
 encoder = OneHotEncoder(sparse_output=False)
 y = y.reshape(-1, 1)
+
 y_encoded = encoder.fit_transform(y)
 
 # Train the RandomForest model
