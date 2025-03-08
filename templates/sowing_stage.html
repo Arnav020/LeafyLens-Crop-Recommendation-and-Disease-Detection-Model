@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation - Sowing Stage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://example.com/field-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #2c7a2c;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #2c7a2c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f5b1f;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #2c7a2c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation - Sowing Stage</h1>
+        <form method="post">
+            <label for="nitrogen">Nitrogen Level:</label>
+            <input type="number" step="any" id="nitrogen" name="nitrogen" required>
+
+            <label for="phosphorus">Phosphorus Level:</label>
+            <input type="number" step="any" id="phosphorus" name="phosphorus" required>
+
+            <label for="potassium">Potassium Level:</label>
+            <input type="number" step="any" id="potassium" name="potassium" required>
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" step="any" id="temperature" name="temperature" required>
+
+            <label for="humidity">Humidity (%):</label>
+            <input type="number" step="any" id="humidity" name="humidity" required>
+
+            <label for="ph">pH Level:</label>
+            <input type="number" step="any" id="ph" name="ph" required>
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="number" step="any" id="rainfall" name="rainfall" required>
+
+            <input type="submit" value="Recommend">
+        </form>
+
+        {% if prediction %}
+        <h2>Recommended Crop Type: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
